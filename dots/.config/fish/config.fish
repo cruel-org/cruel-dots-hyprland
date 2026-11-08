@@ -1,9 +1,10 @@
-# Commands to run in interactive sessions can go here
 if status is-interactive
-    # No greeting
-    set fish_greeting
+    # Custom greeting function using fastfetch
+    function fish_greeting
+        fastfetch
+    end
 
-    # Use starship
+    # Use starship prompt
     function starship_transient_prompt_func
         starship module character
     end
